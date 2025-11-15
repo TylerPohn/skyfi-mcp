@@ -19,7 +19,7 @@ Enable autonomous AI agents to:
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     AI Agent Layer                               │
-│  (Claude Desktop, LangChain Apps, AI SDK Applications)          │
+│  (Claude Code, LangChain Apps, AI SDK Applications)             │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ MCP Protocol
 ┌─────────────────────▼───────────────────────────────────────────┐
@@ -142,7 +142,7 @@ Each tool implements a specific capability:
 - Coordinate system conversion
 
 **AI Framework Integrations:**
-- **Anthropic Desktop Kit (ADK)**: Native MCP support
+- **Claude Code**: Native MCP support
 - **LangChain**: Tool integration via MCP adapter
 - **AI SDK (Vercel)**: Custom tool definitions
 
@@ -364,7 +364,7 @@ User's Machine
 ├── MCP Server (localhost:3000)
 │   ├── Config file with API credentials
 │   └── Local state/cache
-└── AI Agent (Claude Desktop, local LangChain app)
+└── AI Agent (Claude Code, local LangChain app)
     └── Connects to localhost:3000
 ```
 
@@ -434,10 +434,10 @@ skyfi-mcp start --port 3000
 
 ## 9. Integration Patterns
 
-### 9.1 Claude Desktop Integration
+### 9.1 Claude Code Integration
 
 ```json
-// claude_desktop_config.json
+// claude_code_config.json
 {
   "mcpServers": {
     "skyfi": {
@@ -533,7 +533,7 @@ docs/
 ├── configuration.md
 ├── api-reference.md
 ├── examples/
-│   ├── claude-desktop.md
+│   ├── claude-code.md
 │   ├── langchain.md
 │   └── ai-sdk.md
 ├── architecture.md (this document)
