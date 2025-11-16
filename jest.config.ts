@@ -22,6 +22,7 @@ const config: Config = {
       },
     ],
   },
+  transformIgnorePatterns: ['node_modules/(?!(uuid)/)'],
 };
 
 export default config;
