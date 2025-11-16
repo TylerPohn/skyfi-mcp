@@ -145,8 +145,11 @@ export class HTTPTransport {
             }
           }
 
-          const requestId =
-            req.body && 'id' in req.body ? (req.body.id as string | number) : null;
+          let requestId: string | number | null = null;
+          if (req.body && typeof req.body === 'object' && 'id' in req.body) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+            requestId = req.body.id as unknown as string | number;
+          }
           const errorResponse = this.protocolHandler.createErrorResponse(
             requestId,
             errorCode,
